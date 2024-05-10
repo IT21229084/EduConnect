@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import express from "express"
+import paymentRoute from "./route/paymentRoute.js"
 const app = express();
 dotenv.config()
 
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
     res.send('Hello payment service');
 });
 
+app.use("/",paymentRoute);
 // Start server
 const port = process.env.PORT || 3003;
 app.listen(port, () => {
