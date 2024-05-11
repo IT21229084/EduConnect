@@ -10,6 +10,7 @@ import Login from "../pages/Login.jsx";
 import Home from "../pages/Home.jsx"
 import SignUp from "../pages/SignUp.jsx";
 import AllCourses from "../pages/AllCourses.jsx";
+import CourseDetails from "../pages/CourseDetails.jsx";
 const router = createBrowserRouter([
     {
         //main path
@@ -24,10 +25,10 @@ const router = createBrowserRouter([
                 path: "/allcourse",
                 element: <AllCourses />
             },
-            // {
-            //     path: "/postJob",
-            //     element: <CreateJob />
-            // },
+            {
+                path: "/coursedetails",
+                element: <CourseDetails />
+            },
             // {
             //     path: "/myJob",
             //     element: <MyJobs />
