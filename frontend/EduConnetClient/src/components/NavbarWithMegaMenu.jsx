@@ -227,11 +227,11 @@ export default function NavbarWithMegaMenu() {
               Log In
             </Button>
           </a>
-          <a href="/signup">
+          {/* <a href="/signup">
             <Button className="text-gray-500" variant="gradient" size="sm">
               Sign UP
             </Button>
-          </a>
+          </a> */}
         </div>
         <IconButton
           variant="text"
