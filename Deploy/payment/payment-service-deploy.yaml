@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-deployment
+  labels:
+    name: payment-deploy
+    app: payment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: payment-service-pod
+      app: payment-service
+  template:
+    metadata:
+      name: payment-service-pod
+      labels:
+        name: payment-service-pod
+        app: payment-service
+    spec:
+      containers:
+      - name: payment-service
+        image: malithiroshan/educonnect-payment-service:v1.0
+        ports:
+        - containerPort: 3003

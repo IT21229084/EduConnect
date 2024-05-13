@@ -48,7 +48,7 @@ dotenv.config()
 
 app.use(express.json());
 
-app.use("/notify",notificationroute);
+app.use("/",notificationroute);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

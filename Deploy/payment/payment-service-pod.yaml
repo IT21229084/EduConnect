@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: payment-service-pod
+  labels:
+    name: payment-service-pod
+    app: payment-service
+spec:
+  containers:
+  - name: payment-service
+    image: malithiroshan/educonnect-payment-service:v1.0
+    ports:
+    - containerPort: 3003

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learner-deployment
+  labels:
+    name: learner-deploy
+    app: learner
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: learner-service-pod
+      app: learner-service
+  template:
+    metadata:
+      name: learner-service-pod
+      labels:
+        name: learner-service-pod
+        app: learner-service
+    spec:
+      containers:
+      - name: learner-service
+        image: malithiroshan/educonnect-learner-service:v1.0
+        ports:
+        - containerPort: 3002

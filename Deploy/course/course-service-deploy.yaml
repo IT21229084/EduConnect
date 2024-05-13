@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: course-deployment
+  labels:
+    name: course-deploy
+    app: course
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: course-service-pod
+      app: course-service
+  template:
+    metadata:
+      name: course-service-pod
+      labels:
+        name: course-service-pod
+        app: course-service
+    spec:
+      containers:
+      - name: course-service
+        image: malithiroshan/educonnect-course-service:v1.0
+        ports:
+        - containerPort: 3001

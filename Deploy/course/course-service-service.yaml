@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: course-service
+  labels:
+    name: course-service
+    app: course
+spec:
+  selector:
+    name: course-service-pod
+    app: course-service
+  ports:
+    - protocol: TCP
+      port: 80 # The port on the service
+      nodePort: 30007
+      targetPort: 3001 # The port your frontend Pod is listening on
+  type: NodePort # This can be NodePort, ClusterIP, or LoadBalancer depending on your setup

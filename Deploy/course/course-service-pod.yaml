@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: course-service-pod
+  labels:
+    name: course-service-pod
+    app: course-service
+spec:
+  containers:
+  - name: course-service
+    image: malithiroshan/educonnect-course-service:v1.0
+    ports:
+    - containerPort: 3001
