@@ -42,7 +42,7 @@ function AllCourses() {
         <section class="py-20">
           <h1 class="ml-20 pl-20 font-sans text-4xl font-bold text-gray-900">All Courses</h1>
           <div class="mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
+            {/* <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
               <a href="#">
                 <div class="relative flex items-end overflow-hidden rounded-xl">
                   <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hotel Photo" />
@@ -50,7 +50,7 @@ function AllCourses() {
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
-                    <span class="text-slate-400 ml-1 text-sm">4.9</span>
+                    <span class="text-slate-400 ml-1 text-sm">4.1</span>
                   </div>
                 </div>
 
@@ -72,23 +72,23 @@ function AllCourses() {
                   </div>
                 </div>
               </a>
-            </article>
+            </article> */}
 
             <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl">
               <a href="#">
                 <div class="relative flex items-end overflow-hidden rounded-xl">
-                  <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hotel Photo" />
+                  <img src="https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg" alt="Hotel Photo" />
                   <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
-                    <span class="text-slate-400 ml-1 text-sm">4.9</span>
+                    <span class="text-slate-400 ml-1 text-sm">4.0</span>
                   </div>
                 </div>
 
                 <div class="mt-1 p-2">
-                  <h2 class="text-slate-700">UI/UX Engineer</h2>
-                  <p class="text-slate-400 mt-1 text-sm">Master Your UI/UX Skills</p>
+                  <h2 class="text-slate-700">Intro to Entrepreneurship: Get started as an Entrepreneur</h2>
+                  <p class="text-slate-400 mt-1 text-sm">Master the concepts and coming up with great business ideas</p>
 
                   <div class="mt-3 flex items-end justify-between">
                     <p>

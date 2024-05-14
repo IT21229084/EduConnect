@@ -178,12 +178,20 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        {/* <ListItem className="flex text-gray-600 items-center gap-2 py-2 pr-4">
-          Courses
-        </ListItem> */}
-
         <a href="/allcourse" className="flex text-gray-600 items-center gap-2 py-2 pr-4">
           Courses
+        </a>
+
+      </Typography>
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <a href="/myLearning" className="flex text-gray-600 items-center gap-2 py-2 pr-4">
+          MyLearning
         </a>
 
       </Typography>

@@ -4,7 +4,7 @@ function Feedback() {
     return (
         <section class="py-24 relative">
             <div class="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-                <h2 class="font-manrope font-bold text-4xl text-black text-center mb-11">People Love Us</h2>
+                <h2 class="font-manrope font-bold text-4xl text-black text-center mb-11">Student FeedBack</h2>
                 <div class="grid grid-cols-12 py-6 border-y border-gray-200 mb-11">
                     <div class="col-span-12 lg:col-span-10 ">
                         <h5 class="font-manrope font-semibold text-2xl leading-9 text-black text-center">Reviews
@@ -91,8 +91,9 @@ function Feedback() {
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">One of the standout features of Pagedone is its intuitive and user-friendly interface. Navigating through the system feels natural, and the layout makes it easy to locate and utilize various design elements. This is particularly beneficial for designers looking to streamline their workflow.  </p>
+                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">One of the standout features of our platform is its intuitive and user-friendly interface. Navigating through our system feels natural, and the layout makes it easy to locate and utilize various teaching tools. This is particularly beneficial for educators looking to streamline their workflow.</p>
                                     <div class="flex items-center justify-between">
+
                                         <div class="cursor-pointers flex items-center gap-2">
                                             <a href="javascript:;" class="font-semibold text-lg cursor-pointer leading-8 text-indigo-600 whitespace-nowrap">
                                                 View & Reply</a>
@@ -104,7 +105,7 @@ function Feedback() {
                                         </div>
                                         <p
                                             class="lg:hidden font-medium text-sm leading-7 text-gray-400 lg:text-center whitespace-nowrap">
-                                            Nov 01, 2023</p>
+                                            Feb 21, 2023</p>
                                     </div>
                                 </div>
                             </div>
@@ -256,9 +257,8 @@ function Feedback() {
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">Pagedone excels in addressing the demand for responsive design. Its features ensure that designs not only look great on desktop but also seamlessly adapt to various screen sizes, providing a consistent user experience across devices.
+                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">Our platform prioritizes responsive design to meet the diverse needs of learners. Our features guarantee that course materials not only display beautifully on desktops but also seamlessly adapt to different screen sizes, ensuring a consistent and enjoyable learning experience across devices.</p>
 
-                                    </p>
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-2">
                                             <a href="javascript:;" class="font-semibold text-lg cursor-pointer leading-8 text-indigo-600 whitespace-nowrap">
@@ -271,7 +271,7 @@ function Feedback() {
                                         </div>
                                         <p
                                             class="lg:hidden font-medium text-sm leading-7 text-gray-400 lg:text-center whitespace-nowrap">
-                                            Nov 01, 2023</p>
+                                            May 03, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -423,8 +423,8 @@ function Feedback() {
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">Collaboration is made seamless with Pagedone's collaboration tools. Whether working within a team or seeking client feedback, the system facilitates effective communication and real-time collaboration, enhancing the overall design process.
-                                    </p>
+                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">Collaboration is effortless with our platform's collaborative tools. Whether you're collaborating within your teaching team or gathering feedback from students, our system facilitates seamless communication and real-time collaboration, enhancing the overall educational experience.</p>
+
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-2">
                                             <a href="javascript:;" class="font-semibold text-lg cursor-pointer leading-8 text-indigo-600 whitespace-nowrap">
@@ -589,7 +589,8 @@ function Feedback() {
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">Pagedone doesn't disappoint when it comes to the variety and richness of its design components. From pre-built templates to customizable elements, the system caters to both beginners and seasoned designers. The extensive library ensures a diverse range of options to bring creative visions to life.  </p>
+                                    <p class="font-normal text-base leading-7 text-gray-400 mb-4 lg:pr-8">Our platform offers a rich variety of design components to meet your educational needs. From customizable templates to versatile elements, our system caters to both novice and experienced educators. With an extensive library at your disposal, you'll find a diverse range of options to bring your creative teaching ideas to life.</p>
+
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-2">
                                             <a href="javascript:;" class="font-semibold text-lg leading-8 text-indigo-600 whitespace-nowrap cursor-pointer">
@@ -602,7 +603,7 @@ function Feedback() {
                                         </div>
                                         <p
                                             class="lg:hidden font-medium text-sm leading-7 text-gray-400 lg:text-center whitespace-nowrap">
-                                            Nov 01, 2023</p>
+                                            Jun 15, 2024</p>
                                     </div>
                                 </div>
                             </div>

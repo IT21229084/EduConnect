@@ -8,23 +8,23 @@ function Home() {
 
   const callouts = [
     {
-      name: 'Desk and Office',
+      name: 'Design',
       description: 'Work from home accessories',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
+      imageSrc: 'https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg',
       imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
       href: '#',
     },
     {
-      name: 'Self-Improvement',
+      name: 'Development',
       description: 'Journals and note-taking',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
+      imageSrc: 'https://cdn.pixabay.com/photo/2019/06/17/19/48/source-4280758_1280.jpg',
       imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
       href: '#',
     },
     {
-      name: 'Travel',
+      name: 'IT and Software',
       description: 'Daily commute essentials',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
+      imageSrc: 'https://cdn.pixabay.com/photo/2018/02/15/18/29/devops-3155972_1280.jpg',
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
       href: '#',
     },
@@ -120,27 +120,21 @@ function Home() {
 
       <section className="mt-10 p-10">
         <div className="container mx-auto flex !w-full max-w-6xl flex-col !items-center justify-center rounded-2xl bg-gray-900 px-6 py-16">
-          <Typography
-            className="text-center text-2xl font-bold md:text-3xl "
-            color="white"
-          >
-            Be the first who see the news
+          <Typography className="text-center text-2xl font-bold md:text-3xl " color="white">
+            Stay Updated with the Latest in Education
           </Typography>
-          <Typography
-            color="white"
-            className="my-3 text-center !text-base md:w-7/12"
-          >
-            Your company may not be in the software business, but eventually, a
-            software company will be in your business.
+          <Typography color="white" className="my-3 text-center !text-base md:w-7/12">
+            Your institution may not be solely focused on technology, but staying ahead means embracing advancements. Subscribe now to receive the latest updates and trends in education technology.
           </Typography>
-          <div className="mt-2 flex w-full flex-col gap-3 md:w-fit md:flex-row">
-            <Input label="Email" color="white" />
+          <div className="mt-4 flex w-full flex-col gap-3 md:w-fit md:flex-row">
+            <Input className='text-white' label="Email" labelColor="white" color="white" />
             <Button color="white" size="md" className="flex-shrink-0">
-              button
+              Subscribe
             </Button>
           </div>
         </div>
       </section>
+
 
 
 
