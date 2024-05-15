@@ -1,0 +1,30 @@
+.form-control {
+  width: 300px !important;
+}
+.employee-form {
+  height: 100vh;
+  width: 100%;
+}
+.sub-form {
+  height: 500px;
+  width: 800px;
+  background-color: #e8d7c9;
+  box-shadow: 140px !important;
+  border-radius: 20px;
+  margin: auto;
+}
+.update-btn-btn {
+  margin-right: 10px;
+  background-color: #a78364 !important;
+  border: 1px solid #a78364 !important;
+}
+.delete-btn-btn {
+  background-color: #fff !important;
+  color: #a78364 !important;
+  border: 1px solid #a78364 !important;
+}
+.delete-btn-btn:hover{
+    background-color: #a78364 !important;
+    border: 1px solid #a78364 !important;
+    color: #fff !important;
+}

@@ -1,0 +1,32 @@
+.logo-name{
+    color: #A78364;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.header-link{
+    color: #A78364 !important;
+    font-size: 20px;
+}
+.nav-item{
+    font-size: 20px;
+    margin: 10px;
+}
+.header-btn-signup{
+    border: 1px solid #A78364 !important;
+    margin-right: 5px;
+    color: #A78364 !important;
+}
+.header-btn-signup:hover{
+    background-color: #A78364 !important;
+    color: #fff !important;
+}
+.header-btn-login{
+    background-color: #A78364 !important;
+    border: #A78364 !important;
+    color: #fff;
+}
+.header-search-bar:focus{
+    border: 1px solid #A78364 !important;
+}
