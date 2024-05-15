@@ -2,6 +2,9 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import express from "express"
+import courseRoutes from './Router/courseRoutes'
+import enrollRoutes from './Router/enrollmentRoutes'
+import guestRoutes from './Router/guestRoutes'
 const app = express();
 dotenv.config()
 
@@ -18,10 +21,16 @@ const connect = async () => {
 app.use(cors())
 app.use(express.json())
 
+    ;
 // Define routes
 app.get('/', (req, res) => {
     res.send('Hello course service');
 });
+
+//Add routes here
+app.use("/", courseRoutes);
+app.use("/enroll", enrollRoutes);
+app.use("/guest-routes", guestRoutes)
 
 // Start server
 const port = process.env.PORT || 3001;

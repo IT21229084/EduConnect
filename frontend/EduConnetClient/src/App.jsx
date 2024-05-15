@@ -10,7 +10,7 @@ function App() {
  
   return (
     <>
-      <NavbarWithMegaMenu/>
+      {/* <NavbarWithMegaMenu/> */}
       <Outlet/>
       <Footer/>
     </>

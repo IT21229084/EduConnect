@@ -10,6 +10,8 @@ import Feedback from '../components/Feedback';
 import AllCourse from '../pages/AllCourses.jsx'
 import MyCourses from '../components/MyCourses.jsx';
 import UserProfile from './UserProfile.jsx';
+import ProgressCourses from '../components/ProgressCourses.jsx';
+import CompleteCourse from '../components/CompleteCourse.jsx'
 
 function MyLearning() {
 
@@ -22,13 +24,13 @@ function MyLearning() {
     {
       label: "InProgress",
       value: "Progress",
-      desc: <AllCourse/>,
+      desc: <ProgressCourses/>
     },
 
     {
       label: "Complete",
-      value: "vue",
-      desc: <Feedback/>
+      value: "complete",
+      desc: <CompleteCourse/>
     },
 
     {

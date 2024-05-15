@@ -12,6 +12,13 @@ import SignUp from "../pages/SignUp.jsx";
 import AllCourses from "../pages/AllCourses.jsx";
 import CourseDetails from "../pages/CourseDetails.jsx";
 import MyLearning from "../pages/MyLearning.jsx";
+import AdminHome from "../pages/Admin/AdminHome.jsx";
+import AdminProfile from "../pages/Admin/AdminProfile.jsx";
+import AddUser from "../components/Admin/AddUser.jsx";
+import CourseDetailsadmin from "../components/Admin/CourseDetailsadmin.jsx";
+import AddCourse from "../components/instructor/AddCourse.jsx";
+import InstructorProfile from "../pages/Instructor/InstructorProfile.jsx";
+import Entrollments from "../pages/Instructor/Entrollments.jsx";
 const router = createBrowserRouter([
     {
         //main path
@@ -34,6 +41,37 @@ const router = createBrowserRouter([
                 path: "/myLearning",
                 element: <MyLearning />
             },
+            //admin routers
+            {
+                path: "/adminHome",
+                element: <AdminHome />
+            },
+            {
+                path: "/adminProfile",
+                element: <AdminProfile />
+            },
+            {
+                path: "/instructorProfile",
+                element: <InstructorProfile />
+            },
+            {
+                path: "/addusers",
+                element: <AddUser />
+            },
+            {
+                path: "/CourseDetailsadmin",
+                element: <CourseDetailsadmin />
+            },
+            {
+                path: "/addCourse",
+                element: <AddCourse />
+            },
+            {
+                path: "/entroll",
+                element: <Entrollments />
+            },
+            
+            
             // {
             //     path: "/salary",
             //     element: <SalaryPage />
