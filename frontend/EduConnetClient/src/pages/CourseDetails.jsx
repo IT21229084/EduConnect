@@ -1,24 +1,75 @@
-import React from 'react'
-const { id } = useParams();
-const [data, setData] = useState();
-
-
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 function CourseDetails() {
+  const { id } = useParams();
+  const [data, setData] = useState();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [enrolled, setEnrolled] = useState(true);
+  useEffect(() => {
+    // Fetch data from the endpoint using Axios
+    axios.get(`http://localhost:8000/course/guest-routes/${id}`)
+      .then(response => {
+        console.log('Axios response:', response);
+        setData(response.data.course);
+      })
+      .catch(error => console.error('Error fetching courses:', error));
+  }, [id]);
+
+  console.log(data)
+
+
+  const handleCheckout = async () => {
+    // get token
+    // const token = localStorage.getItem("jsonwebtoken");
+    // const isToken = token ? true : false;
+
+    // if (!isToken) {
+    //   navigate("/login");
+    // }
+    // const userDetails = JSON.parse(token);
+    // const userId = userDetails?.decodedJWT.userId;
+    // console.log(userId);
+    // setLoading(true);
+
+    try {
+      // send request for payment service
+      const res = await axios.post("http://localhost:8000/payment/stripe", {
+        name: data?.title,
+        price: data?.price,
+        quantity: 1,
+        id: data?._id,
+        image: data?.coverImage,
+        // userId: userId,
+      });
+      console.log("res is", res);
+      setLoading(false);
+      // redirect to relevant url
+      window.location = res.data.url;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
+
+  
   return (
     <div class="font-sans bg-white">
       <div class="p-6 lg:max-w-7xl max-w-2xl max-lg:mx-auto">
         <div class="grid items-start grid-cols-1 lg:grid-cols-5 gap-12">
           <div class="lg:col-span-3 w-full lg:sticky top-0 text-center">
             <div class="bg-white px-4 py-5 rounded-xl">
-              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product" class="rounded mx-auto" />
+              <img src={data?.Image} alt="Product" class="rounded mx-auto" />
             </div>
           </div>
 
           <div class="lg:col-span-2">
-            <h2 className="text-3xl font-semibold text-black">Mastering Python | Full Course</h2>
+            <h2 className="text-3xl font-semibold text-black">{data?.title}e</h2>
             <div className="flex flex-wrap gap-4 mt-4">
-              <p className="text-black text-4xl font-semibold">$49</p>
-              <p className="text-black text-xl"><strike>$59</strike> <span className="text-sm ml-1">Tax included</span></p>
+              <p className="text-black text-4xl font-semibold">{data?.price}</p>
+              <p className="text-black text-xl"> <span className="text-sm ml-1">Duration - {data.duration}h</span></p>
             </div>
 
 
@@ -52,13 +103,13 @@ function CourseDetails() {
             </div>
 
             <div class="flex flex-wrap gap-4 mt-8">
-              <button type="button" class="min-w-[200px] px-4 py-3 bg-yellow-300 hover:bg-yellow-400 text-black text-sm font-semibold rounded">Entrol now</button>
+              <button onClick={handleCheckout} type="button" class="min-w-[200px] px-4 py-3 bg-yellow-300 hover:bg-yellow-400 text-black text-sm font-semibold rounded">Entrol now</button>
               <button type="button" class="min-w-[200px] px-4 py-2.5 border border-yellow-300 bg-transparent text-yellow-300 text-sm font-semibold rounded">Add to cart</button>
             </div>
             <div className="mt-8">
               <h3 className="text-lg font-semibold text-black">About the course</h3>
               <ul className="space-y-3 list-disc mt-4 pl-4 text-sm text-black">
-                <li>Our course provides comprehensive knowledge essential for mastering Python programming.</li>
+                <li>{data?.description}</li>
                 <li>Designed for beginners and intermediate learners alike, making it accessible to a wide audience.</li>
                 <li>Structured content covering fundamental concepts, advanced topics, and practical exercises to reinforce learning.</li>
                 <li>Flexible learning options, including video lectures, coding exercises, and quizzes, tailored to accommodate different learning styles.</li>
@@ -70,7 +121,7 @@ function CourseDetails() {
               <ul class="flex">
                 <li class="text-white font-semibold text-sm bg-gray-800 py-3 px-8 border-b-2 border-yellow-300 cursor-pointer transition-all">
                   Reviews</li>
-                <li class="text-black font-semibold text-sm py-3 px-8 cursor-pointer">Instructor</li>
+                <li class="text-black font-semibold text-sm py-3 px-8 cursor-pointer">Instructor - {data?.instructor}</li>
               </ul>
 
               <div class="mt-8">

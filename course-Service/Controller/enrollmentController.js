@@ -27,10 +27,10 @@ export const createEnrollment = async (req, res, next) => {
   const savedEnrollment = await newEnrollment.save();
   if (savedEnrollment) {
     const userResponse = await axios.get(
-      `http://user:8006/common/user/${userId}`
+      `http://localhost:8000/auth/${userId}`
     );
     const email = userResponse.data.email;
-    const response = await axios.post("http://notification:8004/send-email", {
+    const response = await axios.post("http://localhost:8000/notification/email", {
       email: email,
       subject: `Course Enrollment - ${course.title}`,
       text: `Congratulations! You have successfully Enrolled to ${course.title}! You will received a payment Confirmation Message shortly.`,

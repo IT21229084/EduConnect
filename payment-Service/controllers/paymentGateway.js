@@ -25,11 +25,12 @@ export const paymentGateway = async (req, res) => {
           price_data: {
             currency: "usd",
             product_data: {
-              name: product.name,
+              name: req.body.name,
+              images: [req.body.image],
             },
-            unit_amount: product.price * 100,
+            unit_amount: req.body.price * 100,
           },
-          quantity: 1,
+          quantity: req.body.quantity,
         },
       ],
       success_url: "http://localhost:5173/apod",
