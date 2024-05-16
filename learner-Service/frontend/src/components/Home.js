@@ -1,9 +1,9 @@
 import React from "react";
 import "../css/home.css";
 import {Link} from 'react-router-dom'
-import MainImage from "../img/main.png";
+import MainImage from "../img/qw.png";
 // import oneImage from "../img/1.png";
-import twoImage from "../img/2.png";
+import twoImage from "../img/5.png";
 // import threeImage from "../img/3.png";
 import fourImage from "../img/4.png";
 import fiveImage from "../img/5.png";
@@ -29,8 +29,8 @@ function Home() {
         </div>
         <div className="col-md-6 order-md-1">
           <h2 className="main-header">
-            Wrap your body nicely
-            <br /> and comfy
+          Elevate your learning experience <br /> with
+            <br /> our intuitive course management platform.
           </h2>
           <p className="main-para">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
@@ -40,7 +40,7 @@ function Home() {
           </p>
 
           <div className="btn-container d-flex justify-content-center align-items-center">
-            <Link to='/products'><button className="shop-btn">SHOP NOW</button></Link>
+            <Link to='/products'><button className="shop-btn">ENROLL NOW</button></Link>
             <button className="about-btn">ABOUT US</button>
           </div>
         </div>
@@ -107,7 +107,7 @@ function Home() {
       </div>
 
       <div className="arrival-container">
-        <div className="header mb-5 mt-5">New Arrival</div>
+        <div className="header mb-5 mt-5">New Courses</div>
         <div className="row mt-5">
           <div className="col-md-3 arrival-img">
             <img

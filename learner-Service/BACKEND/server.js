@@ -6,7 +6,7 @@ const app = express();
 
 const users = require("./routes/users");
 
-const coursedeliveryRoutes = require('./routes/coursedeliveryRoutes');
+const deliveryRoutes = require('./routes/deliveryRoutes');
 
 // Bodyparser middleware
 app.use(
@@ -28,17 +28,18 @@ const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose.connect(
-  db,
-  { useNewUrlParser: true }
-)
+    db,
+    { useNewUrlParser: true }
+  )
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
 
-const port = process.env.PORT || 5050;
+  const port = process.env.PORT || 5050;
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
 
 // Routes
 app.use("/users", users);
+app.use('/api/delivery', deliveryRoutes);
 
-app.use('/api/coursedelivery', coursedeliveryRoutes);
+

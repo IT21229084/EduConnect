@@ -52,17 +52,22 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link fw-bold header-link" href="# ">
-                Downloads
+                New Courses
               </a>
             </li>
             <li className="nav-item header-link">
-              <a className="nav-link fw-bold header-link" href="# ">
+              <a className="nav-link fw-bold header-link" href="/student-management">
                 Memberships
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-bold header-link" href="# ">
-                Contact Us
+              <a className="nav-link fw-bold header-link" href="/course-delivery-management ">
+                Course Delivery
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold header-link" href="/progress-tracking ">
+                Progress Check
               </a>
             </li>
             <li className="nav-item">
