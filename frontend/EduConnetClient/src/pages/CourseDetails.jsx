@@ -40,7 +40,7 @@ function CourseDetails() {
         price: data?.price,
         quantity: 1,
         id: data?._id,
-        image: data?.coverImage,
+        image: data?.Image,
         // userId: userId,
       });
       console.log("res is", res);
