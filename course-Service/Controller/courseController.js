@@ -1,4 +1,4 @@
-import Course from '../models/courseModel';
+import Course from '../Model/courseModel.js';
 
 
 export const createCourse = async (req, res, next) => {
@@ -9,7 +9,8 @@ export const createCourse = async (req, res, next) => {
         duration,
         Image,
         price,
-        createdBy,
+        // tags,
+        // createdBy,
         lessons,
     } = req.body;
 
@@ -25,7 +26,8 @@ export const createCourse = async (req, res, next) => {
         duration,
         Image,
         price,
-        createdBy: req.user.userId,
+        // tags,
+        // createdBy: req.user.userId,
         lessons,
     });
 

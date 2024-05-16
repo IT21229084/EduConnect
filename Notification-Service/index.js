@@ -47,6 +47,9 @@ dotenv.config()
 // sendMail(transporter,mailOption)
 
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.send('Hello Notification service');
+  });
 
 app.use("/",notificationroute);
 

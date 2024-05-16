@@ -1,10 +1,10 @@
 import express from "express";
 const router = express.Router();
-const {
+import {
   getAllCourses,
   getOneCourse,
-} = require("../controllers/courseController");
+} from "../Controller/courseController.js"
 
 router.route("/").get(getAllCourses);
 router.route("/:id").get(getOneCourse);
-module.exports = router;
+export default router

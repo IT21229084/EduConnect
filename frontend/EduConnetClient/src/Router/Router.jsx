@@ -34,7 +34,7 @@ const router = createBrowserRouter([
                 element: <AllCourses />
             },
             {
-                path: "/coursedetails",
+                path: "/coursedetails/:id",
                 element: <CourseDetails />
             },
             {
@@ -50,10 +50,7 @@ const router = createBrowserRouter([
                 path: "/adminProfile",
                 element: <AdminProfile />
             },
-            {
-                path: "/instructorProfile",
-                element: <InstructorProfile />
-            },
+          
             {
                 path: "/addusers",
                 element: <AddUser />
@@ -69,6 +66,10 @@ const router = createBrowserRouter([
             {
                 path: "/entroll",
                 element: <Entrollments />
+            },
+            {
+                path: "/instructorProfile",
+                element: <InstructorProfile />
             },
             
             

@@ -1,23 +1,33 @@
 import express from "express";
 const router = express.Router();
-const {
+import {
   createEnrollment,
   getAllEnrollments,
   getEnrollmentById,
   updateEnrollmentById,
   deleteEnrollmentById,
   getAllEnrollmentsByInstructor,
-} = require("../controllers/enrollmentController");
-const authController = require("../controllers/authController");
+} from "../controller/enrollmentController.js"
+// import { restrictTo, authenticateRequest } from "../Controller/authController.js";
+
+// router
+//   .route("/")
+//   .post(createEnrollment)
+//   .get(restrictTo("admin", "instructor"), getAllEnrollments);
+// router
+//   .route("/:id")
+//   .get(restrictTo("learner"), getEnrollmentById)
+//   .patch(restrictTo("learner"), updateEnrollmentById)
+//   .delete(restrictTo("learner"), deleteEnrollmentById);
 
 router
   .route("/")
   .post(createEnrollment)
-  .get(authController.restrictTo("admin", "instructor"), getAllEnrollments);
+  .get(getAllEnrollments);
 router
   .route("/:id")
-  .get(authController.restrictTo("learner"), getEnrollmentById)
-  .patch(authController.restrictTo("learner"), updateEnrollmentById)
-  .delete(authController.restrictTo("learner"), deleteEnrollmentById);
+  .get(getEnrollmentById)
+  .patch(updateEnrollmentById)
+  .delete(deleteEnrollmentById);
 
-module.exports = router;
+export default router

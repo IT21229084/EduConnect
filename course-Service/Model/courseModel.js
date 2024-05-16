@@ -69,10 +69,20 @@ const courseSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    // tags: {
+    //   type: [String],
+    //   required: true,
+    // },
     createdBy: {
       type: String,
-      required: true,
+      // required: true,
     },
+
+    // authorized: {
+    //   type: Boolean,
+    //   default: false
+    // },
+
     created_at: { type: Date, default: Date.now },
 
     lessons: [lessonSchema],
@@ -81,6 +91,6 @@ const courseSchema = new mongoose.Schema(
 );
 
 // Creating mongoose model using Schema
-const CourseModel = mongoose.model("Course", courseSchema);
+export default mongoose.model("Course", courseSchema);
 
-module.exports = CourseModel;
+

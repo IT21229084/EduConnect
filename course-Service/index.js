@@ -2,9 +2,9 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import express from "express"
-import courseRoutes from './Router/courseRoutes'
-import enrollRoutes from './Router/enrollmentRoutes'
-import guestRoutes from './Router/guestRoutes'
+import courseRoutes from './Router/courseRoutes.js'
+import enrollRoutes from './Router/enrollmentRoutes.js'
+import guestRoutes from './Router/guestRoutes.js'
 const app = express();
 dotenv.config()
 

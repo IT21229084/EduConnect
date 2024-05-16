@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-const {
+import {
   createCourse,
   updateCourse,
   deleteCourse,
@@ -8,23 +8,41 @@ const {
   approveCourse,
   getCourseByApproval,
 
-} = require("../controllers/courseController");
-const authController = require("../controllers/authController");
+} from "../Controller/courseController.js"
+// import { restrictTo, authenticateRequest } from "../Controller/authController.js";
 
-router.route("/").post(authController.restrictTo("instructor"), createCourse);
+
+// router.route("/").post(restrictTo("instructor"), createCourse);
+
+// router
+//   .route("/:id")
+//   .patch(restrictTo("instructor"), updateCourse)
+//   .delete(restrictTo("instructor"), deleteCourse);
+
+// router
+//   .route("/course/user")
+//   .get(restrictTo("instructor"), getCoursesByUser);
+
+// router
+//   .route("/course/:id")
+//   .patch(restrictTo("admin"), approveCourse)
+//   .get(restrictTo("admin"), getCourseByApproval)
+
+
+router.route("/").post( createCourse);
 
 router
   .route("/:id")
-  .patch(authController.restrictTo("instructor"), updateCourse)
-  .delete(authController.restrictTo("instructor"), deleteCourse);
+  .patch( updateCourse)
+  .delete( deleteCourse);
 
 router
-  .route("/course/user")
-  .get(authController.restrictTo("instructor"), getCoursesByUser);
+  .route("/course/user/:id")
+  .get( getCoursesByUser);
 
 router
   .route("/course/:id")
-  .patch(authController.restrictTo("admin"), approveCourse)
-  .get(authController.restrictTo("admin"), getCourseByApproval)
-  
-module.exports = router;
+  .patch( approveCourse)
+  .get( getCourseByApproval)
+
+export default router
