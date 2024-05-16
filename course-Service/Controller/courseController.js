@@ -9,7 +9,7 @@ export const createCourse = async (req, res, next) => {
         duration,
         Image,
         price,
-        // tags,
+        
         // createdBy,
         lessons,
     } = req.body;
