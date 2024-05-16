@@ -48,7 +48,7 @@ const CourseTracking = () => {
 
   const getTrackingDataApi = (trackingId) => {
     axios
-      .post("http://localhost:5050/api/coursedelivery/tracking", {
+      .post("http://localhost:5050/api/delivery/tracking", {
         trackingId: trackingId,
       })
       .then((response) => {
@@ -58,7 +58,7 @@ const CourseTracking = () => {
       });
   };
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="container d-flex justify-content-center">
@@ -67,7 +67,7 @@ const CourseTracking = () => {
         style={{
           height: "100vh",
         }}>
-        <h3 className="mt-5 text-center mb-5">Course Tracking</h3>
+        <h3 className="mt-5 text-center mb-5">Student Progress Tracking</h3>
 
         <Form
           layout="vertical"
@@ -84,19 +84,18 @@ const CourseTracking = () => {
           <Form.Item
             style={{ width: 500 }}
             name="trackingId"
-            // applied some validation rules for this
             rules={[
               {
                 required: true,
-                message: "Please input your order tracking id!",
+                message: "Please input your progress tracking id!",
               },
               {
                 len: 24,
-                message: "Order tracking id should have 12 characters",
+                message: "Progress tracking id should have 12 characters",
               },
             ]}>
             <Input
-              placeholder="Please Enter Order Tracking Id"
+              placeholder="Please Enter Progress Tracking Id"
               name="trackingId"
             />
           </Form.Item>
@@ -139,7 +138,7 @@ const CourseTracking = () => {
             <Card
               style={{ marginTop: 16 }}
               type="inner"
-              title={"Course #" + course.trackingId}>
+              title={"Course Progress #" + course.trackingId}>
               <div
                 style={{
                   display: "flex",
@@ -152,17 +151,17 @@ const CourseTracking = () => {
                     course.enrolled
                       ? 1
                       : course.inprogress
-                        ? 2
-                        : course.completed
-                          ? 3
-                          : 1
+                      ? 2
+                      : course.completed
+                      ? 3
+                      : 1
                   }
                   items={[
                     {
                       title: "Enrolled",
                     },
                     {
-                      title: "In-Progress",
+                      title: "In Progress",
                     },
                     {
                       title: "Completed",

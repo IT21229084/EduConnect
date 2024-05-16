@@ -25,16 +25,19 @@ function Footer() {
   	 			<h4 className='footer-chil-header'>get help</h4>
   	 			<ul>
   	 				<li><a href="# ">FAQ</a></li>
-  	 				<li><a href="# ">Enrollment</a></li>
+  	 				<li><a href="# ">Courses</a></li>
   	 				<li><a href="# ">returns</a></li>
-  	 				<li><a href="# ">order status</a></li>
+  	 				<li><a href="# ">Course status</a></li>
   	 				<li><a href="# ">payment options</a></li>
   	 			</ul>
   	 		</div>
   	 		<div className="footer-colomn col-md-3">
-  	 			<h4 className='footer-chil-header'>online Courses</h4>
+  	 			<h4 className='footer-chil-header'>Online Courses</h4>
   	 			<ul>
-  	 				
+  	 				<li><a href="# ">Computer Science</a></li>
+  	 				<li><a href="# ">Software Engineering</a></li>
+  	 				<li><a href="# ">Python</a></li>
+  	 				<li><a href="# ">More Courses</a></li>
   	 			</ul>
   	 		</div>
   	 		<div className="footer-colomn col-md-3">
