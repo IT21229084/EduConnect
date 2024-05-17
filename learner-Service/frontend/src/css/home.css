@@ -1,4 +1,157 @@
- @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  font-size: 45px;
+  color: #44443C;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.store-header {
+  font-size: 35px;
+  color: #44443C;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.main-header {
+  font-size: 45px;
+  color: #44443C;
+  margin-top: 20px;
+}
+
+.main-para {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.shop-btn {
+  width: 150px;
+  background-color: #A78364;
+  border: none;
+  outline: none;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.shop-btn:hover {
+  background-color: #8a684c;
+}
+
+.about-btn {
+  width: 150px;
+  background-color: #fff;
+  border: 2px solid #A78364;
+  outline: none;
+  height: 50px;
+  color: #44443C;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.about-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.arrival-container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.arrival-img {
+  margin-bottom: 30px;
+}
+
+.summer-container::before {
+  height: 300px;
+  background-color: #eeeee4;
+  z-index: -1;
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.store-container::before {
+  width: 100%;
+  height: 800px;
+  background-color: #eeeee4;
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 0;
+}
+
+.main-image-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #A78364;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.main-image-container::after {
+  content: "";
+  width: 590px;
+  height: 55%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 12%;
+  transform: translateY(-50%);
+  border: 2px solid #A78364;
+}
+
+.add-to-cart {
+  width: 150px;
+  background-color: #A78364;
+  border: none;
+  outline: none;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.add-to-cart:hover {
+  background-color: #8a684c;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); 
 
 * {
   margin: 0;
@@ -135,4 +288,4 @@
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
-}
+} */
