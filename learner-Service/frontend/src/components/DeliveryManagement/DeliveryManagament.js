@@ -55,7 +55,7 @@ const DeliveryManagament = () => {
         deliveryId: selectedDeliverId,
       })
       .then((response) => {
-        openNotification("Course Delivery Deleted Successfully");
+        openNotification("Course Delivery Un-Enrolled Successfully");
         getApi();
       });
   };
@@ -108,14 +108,15 @@ const DeliveryManagament = () => {
       });
   };
 
-  const generateReports = (event) => {
-    axios
+  const generateReports = () => {
+    return axios
       .post("http://localhost:5050/api/delivery/generateReport", {})
       .then((response) => {
         console.log(response);
         setreportUrl(response.data.data);
       });
   };
+  
 
   const assignStudentApi = (deliveryId, studentId, name) => {
     axios
@@ -178,7 +179,7 @@ const DeliveryManagament = () => {
               width: 150,
             }}
             options={students}
-            placeholder="Assign Student"
+            placeholder="Enroll to Course"
             filterOption={(inputValue, option) =>
               option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
               -1
@@ -205,7 +206,7 @@ const DeliveryManagament = () => {
               confirm();
             }}
             type="primary">
-            Delete
+            Un-Enroll
           </Button>
         </Space>
       ),
@@ -214,9 +215,17 @@ const DeliveryManagament = () => {
   useEffect(() => {
     getApi();
     getStudentsApi();
-    generateReports();
+    generateReports()
+      .then(() => {
+        // Report generation completed, do something if needed
+      })
+      .catch((error) => {
+        console.error("Error generating report:", error);
+        // Handle error appropriately, e.g., display an error message
+      });
     //eslint-disable-next-line
   }, []);
+  
 
   const getApi = () => {
     axios
