@@ -19,20 +19,68 @@ function CourseDetails() {
 
   console.log(data)
 
+  // const checkmail = async () =>{
+  //   try {
+  //     // send request for payment service
+  //     const res = await axios.post("http://localhost:8000/notification/email", {
+  //       userEmail:"malithiroshan9@gmail.com",
+  //       Item: data?.title,
+  //       des: data?.description,
+  //       Amount:data?.price,
+  //       // id: data?._id,
+  //       // userId: userId,
+  //     });
+  //     console.log("res is", res);
+  //     setLoading(false);
+  //     // redirect to relevant url
+  //     window.location = res.data.url;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+
+  // const handleCheckout = async () => {
+  //   try {
+  //     // send request for payment service
+  //     const res = await axios.post("http://localhost:8000/payment/stripe", {
+  //       name: data?.title,
+  //       price: data?.price,
+  //       quantity: 1,
+  //       id: data?._id,
+  //       image: data?.Image,
+  //       // userId: userId,
+  //     });
+  //     console.log("res is", res);
+  //     setLoading(false);
+  //     // redirect to relevant url
+  //     window.location = res.data.url;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  const checkmail = async () => {
+    try {
+      // send request for payment service
+      const res = await axios.post("http://localhost:8000/notification/email", {
+        userEmail: "malithiroshan9@gmail.com",
+        Item: data?.title,
+        des: data?.description,
+        Amount: data?.price,
+        // id: data?._id,
+        // userId: userId,
+      });
+      console.log("res is", res);
+      setLoading(false);
+      // redirect to relevant url
+      window.location = res.data.url;
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleCheckout = async () => {
-    // get token
-    // const token = localStorage.getItem("jsonwebtoken");
-    // const isToken = token ? true : false;
-
-    // if (!isToken) {
-    //   navigate("/login");
-    // }
-    // const userDetails = JSON.parse(token);
-    // const userId = userDetails?.decodedJWT.userId;
-    // console.log(userId);
-    // setLoading(true);
-
     try {
       // send request for payment service
       const res = await axios.post("http://localhost:8000/payment/stripe", {
@@ -47,14 +95,18 @@ function CourseDetails() {
       setLoading(false);
       // redirect to relevant url
       window.location = res.data.url;
+
+      // Execute checkmail function after successful handleCheckout
+      await checkmail();
     } catch (error) {
       console.log(error);
     }
   };
 
+  // Call handleCheckout function when needed
 
 
-  
+
   return (
     <div class="font-sans bg-white">
       <div class="p-6 lg:max-w-7xl max-w-2xl max-lg:mx-auto">
@@ -69,7 +121,7 @@ function CourseDetails() {
             <h2 className="text-3xl font-semibold text-black">{data?.title}e</h2>
             <div className="flex flex-wrap gap-4 mt-4">
               <p className="text-black text-4xl font-semibold">{data?.price}</p>
-              <p className="text-black text-xl"> <span className="text-sm ml-1">Duration - {data.duration}h</span></p>
+              {/* <p className="text-black text-xl"> <span className="text-sm ml-1">Duration - {data.duration}h</span></p> */}
             </div>
 
 

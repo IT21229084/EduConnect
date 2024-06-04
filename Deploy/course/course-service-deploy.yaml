@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: course-service
-        image: malithiroshan/educonnect-course-service:v1.0
+        image: malithiroshan/educonnect-course:latest
         ports:
         - containerPort: 3001

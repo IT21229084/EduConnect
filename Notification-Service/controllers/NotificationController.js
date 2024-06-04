@@ -10,7 +10,7 @@ const client = twilio(accountsid, Authtoken);
 
 export const email = async (req, res) => {
 
-    const { userEmail } = req.body;
+    const { userEmail, Item, des, Amount } = req.body;
 
     let config = {
         service: 'gmail',
@@ -38,9 +38,12 @@ export const email = async (req, res) => {
             table: {
                 data: [
                     {
-                        item: "MERN STACK FOR BEGINNERS",
-                        description: "Master the knowledge after You can play with world. ",
-                        price: "$20.99",
+                        // item: "MERN STACK FOR BEGINNERS",
+                        // description: "Master the knowledge after You can play with world. ",
+                        // price: "$20.99",
+                        item: Item,
+                        description: des,
+                        price: Amount+'$',
                     }
                 ]
             },
@@ -53,7 +56,7 @@ export const email = async (req, res) => {
     let message = {
         from: process.env.EMAIL,
         to: userEmail,
-        subject: "Course Entrollment",
+        subject: "Course Payment",
         html: mail
     }
 
@@ -72,8 +75,8 @@ export const sms = async (req, res) => {
 
     const sendSms = async (body) => {
         let msgOptions = {
-            from:+14403874480,
-            to:+94773032542,
+            from: +14403874480,
+            to: +94773032542,
             body
         }
         try {

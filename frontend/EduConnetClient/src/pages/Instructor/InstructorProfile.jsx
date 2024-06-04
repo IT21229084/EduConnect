@@ -1,9 +1,11 @@
 import React from 'react'
+import InstructorNarbar from '../../components/instructor/InstructorNarbar'
 
 function InstructorProfile() {
   return (
     <div>
-    <AdminNavbar />
+    {/* <AdminNavbar /> */}
+    <InstructorNarbar/>
     <div class="bg-white overflow-hidden shadow rounded-lg border">
       <div class="px-4 py-5 sm:px-6">
         <h3 class="text-lg leading-6 font-medium text-gray-900">

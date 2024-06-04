@@ -33,7 +33,7 @@ export const paymentGateway = async (req, res) => {
           quantity: req.body.quantity,
         },
       ],
-      success_url: "http://localhost:5173/apod",
+      success_url: "http://localhost:5173/success",
       cancel_url: "http://localhost:5173/mars",
     });
 

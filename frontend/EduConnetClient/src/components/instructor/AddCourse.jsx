@@ -8,6 +8,7 @@ import axios from "axios";
 // import uploadFileToFirebase from "../../util/UploadFilesToFIreBase";
 import Swal from "sweetalert2";
 import AdminNavbar from '../Admin/AdminNavbar';
+import InstructorNarbar from './InstructorNarbar';
 const { TextArea } = Input;
 const defaultCheckedList = [""];
 function AddCourse() {
@@ -61,7 +62,9 @@ function AddCourse() {
     };
 
     return (
-        <div className="flex justify-center">
+      <div>
+        <InstructorNarbar/>
+          <div className="flex justify-center">
             <form onSubmit={handleSubmit} className="w-full max-w-md">
                 <input type="text" name="title" value={courseInfo.title} onChange={handleChange} placeholder="Title" required className="mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                 <textarea name="description" value={courseInfo.description} onChange={handleChange} placeholder="Description" required className="mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
@@ -72,6 +75,7 @@ function AddCourse() {
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create Course</button>
             </form>
         </div>
+      </div>
     )
 }
 
